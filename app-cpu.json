@@ -1,13 +1,13 @@
 {
-  "id": "cookbook-jupyter-template-cpu",
-  "version": "0.0.2",
-  "description": "Jupyter Lab environment for CPU",
+  "id": "jupyter-flopy-cpu",
+  "version": "0.0.1-cpu",
+  "description": "Jupyter Lab environment for FloPY (CPU)",
   "owner": "${apiUserId}",
   "enabled": true,
   "runtime": "SINGULARITY",
   "runtimeVersion": null,
   "runtimeOptions": ["SINGULARITY_RUN"],
-  "containerImage": "docker://ghcr.io/in-for-disaster-analytics/cookbook-jupyter-template-cpu:0.0.2",
+  "containerImage": "docker://ghcr.io/in-for-disaster-analytics/jupyter-flopy",
   "jobType": "BATCH",
   "maxJobs": -1,
   "maxJobsPerUser": -1,
@@ -141,11 +141,13 @@
   },
   "tags": ["portalName: ALL"],
   "notes": {
-    "label": "Cookbook - Jupyter Lab (CPU)",
+    "label": "FloPy Jupyter Lab",
+    "helpUrl": "https://github.com/In-For-Disaster-Analytics/jupyter-flopy",
+    "helpText": "This app creates a Jupyter Lab environment for FloPy.",
     "hideNodeCountAndCoresPerNode": true,
     "isInteractive": true,
     "icon": "jupyter",
     "category": "Data Processing",
-    "queueFilter": ["development"]
+    "queueFilter": ["vm-small","normal","large","development","gpu-a100", "gpu-a100-dev", "gpu-a100-small"]
   }
 }
